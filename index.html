@@ -9,45 +9,123 @@
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
         <div class="container">
             <h1>Bijendra Prajapati</h1>
-            <p>Web Developer | Designer | Tech Enthusiast</p>
+            <p>Industrial Engineer | Designer | Robotics Enthusiast</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#notes">Notes</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hi! I'm [Your Name], a passionate web developer with a love for creating dynamic and user-friendly websites. I specialize in front-end technologies like HTML, CSS, and JavaScript.</p>
+            <p>Hi! I'm <strong>Your Name</strong>, a passionate web developer with a love for creating dynamic and user-friendly websites. I specialize in front-end technologies like HTML, CSS, JavaScript, and back-end frameworks such as Node.js and Express.</p>
+            <p>Feel free to explore my website to learn more about my skills, projects, and how you can contact me.</p>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
             <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Git & GitHub</li>
+                <li>Python</li>
+                <li>Solidworks</li>
+                <li>C++</li>
+                <li>ROS</li>
+                <li>Gazebo</li>
             </ul>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Projects Section -->
+    <section id="projects">
         <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: your-email@example.com</p>
+            <h2>Projects</h2>
+            <p>Here are some of my recent projects:</p>
+            <ul>
+                <li><a href="https://github.com/your-username/project1" target="_blank">Project 1</a> - Description of project 1</li>
+                <li><a href="https://github.com/your-username/project2" target="_blank">Project 2</a> - Description of project 2</li>
+                <li><a href="https://github.com/your-username/project3" target="_blank">Project 3</a> - Description of project 3</li>
+            </ul>
         </div>
     </section>
 
+    <!-- Notes Section -->
+    <section id="notes">
+        <div class="container">
+            <h2>Notes</h2>
+            <p>Write down your thoughts here. You can add more functionality with JavaScript later!</p>
+            <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNotes()">Save Notes</button>
+        </div>
+    </section>
+
+    <!-- Search Bar Section -->
+    <section id="search-bar">
+        <div class="container">
+            <h2>Search My Website</h2>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button onclick="searchWebsite()">Search</button>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section id="quick-links">
+        <div class="container">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/your-username" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/mebijen" target="_blank">GitHub</a></li>
+                <li><a href="mailto:mebijen@gmail.com">Email Me</a></li>
+                <li><a href="https://www.twitter.com/your-username" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>Feel free to reach out to me for freelance work or collaboration!</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>© 2026 Your Name</p>
+            <p>© 2026 Your Name | All Rights Reserved</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Notes & Search Functionality -->
+    <script>
+        // Save Notes
+        function saveNotes() {
+            const notes = document.getElementById('notes-area').value;
+            localStorage.setItem('userNotes', notes);
+            alert('Notes saved successfully!');
+        }
+
+        // Search Functionality
+        function searchWebsite() {
+            const query = document.getElementById('search-input').value;
+            alert('Search query: ' + query);
+            // Add more functionality here later (e.g., filtering sections of your website)
+        }
+    </script>
 
 </body>
 </html>

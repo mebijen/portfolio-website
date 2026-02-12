@@ -29,48 +29,49 @@ header h1 {
     font-size: 3em;
 }
 
-header p {
-    font-size: 1.2em;
-}
-
-/* About Section */
-#about {
-    background-color: #ecf0f1;
-    padding: 40px 0;
-    text-align: center;
-}
-
-#about p {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Skills Section */
-#skills {
-    background-color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
-
-#skills ul {
-    list-style: none;
+header nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-#skills li {
-    font-size: 1.2em;
-    padding: 10px;
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-/* Contact Section */
-#contact {
-    background-color: #ecf0f1;
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Section Styling */
+section {
     padding: 40px 0;
     text-align: center;
 }
 
-#contact p {
-    font-size: 1.2em;
+section#about {
+    background-color: #ecf0f1;
+}
+
+section#skills {
+    background-color: #fff;
+}
+
+section#notes {
+    background-color: #ecf0f1;
+}
+
+section#search-bar {
+    background-color: #fff;
+}
+
+section#quick-links {
+    background-color: #ecf0f1;
+}
+
+section#contact {
+    background-color: #fff;
 }
 
 /* Footer Styling */
@@ -79,4 +80,30 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
 }
