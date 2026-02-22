@@ -789,3 +789,51 @@ footer a {
     display: none;
   }
 }
+
+/* ─── CATEGORY BLOCKS ─── */
+
+.social-categories {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+}
+
+.category-block {
+  background: white;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.category-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.category-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--terra-dark);
+  margin-bottom: 1.2rem;
+}
+
+.category-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.category-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--stone);
+  transition: all 0.3s ease;
+}
+
+.category-links a:hover {
+  color: var(--terra);
+  padding-left: 6px;
+}
