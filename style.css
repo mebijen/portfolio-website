@@ -1106,20 +1106,20 @@ footer a {
 
 /* Per-logo fine-tuning for similar perceived size */
 .ai-logo.chatgpt-small {        /* already have this class – keep or adjust */
-  width: 85%;                   /* was 65% → increase a bit so it matches others better */
-  height: 85%;
+  width: 1%;                   /* was 65% → increase a bit so it matches others better */
+  height: 1%;
 }
 
 .ai-logo.gemini {               /* add this class if not present */
-  width: 110%;                  /* Gemini native is very small → scale up a bit */
-  height: 110%;
+  width: 50%;                  /* Gemini native is very small → scale up a bit */
+  height: 50%;
   padding: 4px;                 /* optional breathing room */
 }
 
 .ai-logo.perplexity,
 .ai-logo.claude {
-  width: 95%;                   /* wide logos → slightly larger to fill height better */
-  height: 95%;
+  width: 20%;                   /* wide logos → slightly larger to fill height better */
+  height: 20%;
 }
 
 /* Optional: Grok/X logo is dark → can brighten a little if needed */
