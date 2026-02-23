@@ -1106,8 +1106,8 @@ footer a {
 
 /* Per-logo fine-tuning for similar perceived size */
 .ai-logo.chatgpt-small {        /* already have this class – keep or adjust */
-  width: 25%;                   /* was 65% → increase a bit so it matches others better */
-  height: 25%;
+  width: 10%;                   /* was 65% → increase a bit so it matches others better */
+  height: 10%;
 }
 
 .ai-logo.gemini {               /* add this class if not present */
