@@ -974,3 +974,110 @@ footer a {
 .sub-branch.active .sub-toggle {
   transform: rotate(45deg);
 }
+
+/* ── AI Chatbots Vertical Cards ── */
+.ai-chatbots {
+  background: var(--cream);
+  padding: 6rem 3rem;
+}
+
+.ai-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.ai-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: all 0.35s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.8rem 2.2rem;
+}
+
+.ai-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(193,113,79,0.18);
+  border-color: var(--terra-light);
+}
+
+.ai-logo-wrap {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.ai-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ai-content {
+  flex: 1;
+}
+
+.ai-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.ai-name em {
+  color: var(--terra);
+  font-style: normal;
+}
+
+.ai-desc {
+  font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.ai-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--terra);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.ai-cta:hover {
+  color: var(--terra-dark);
+}
+
+@media (max-width: 768px) {
+  .ai-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.4rem;
+    padding: 2rem 1.6rem;
+  }
+  .ai-logo-wrap {
+    width: 110px;
+    height: 110px;
+  }
+}
