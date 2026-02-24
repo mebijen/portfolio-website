@@ -1151,8 +1151,8 @@ footer a {
 
 /* Per-logo tweaks – most need ~80-100%, but some are very wide/tall */
 .journal-logo.ieee {
-  width: 85%;                /* IEEE is compact → slightly larger to match visual weight */
-  height: 85%;
+  width: 50%;                /* IEEE is compact → slightly larger to match visual weight */
+  height: 50%;
 }
 
 .journal-logo.mdpi,
@@ -1170,5 +1170,5 @@ footer a {
 
 /* If any still looks too small/big, add e.g.: */
 .journal-logo.jane {         /* JANE might be small */
-  width: 110%;
+  width: 80%;
 }
