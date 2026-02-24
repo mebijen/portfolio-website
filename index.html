@@ -6,6 +6,7 @@
   <title>Bijendra Prajapati webpage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --terra: #C1714F;
@@ -30,7 +31,7 @@
       overflow-x: hidden;
     }
 
-    /* ─── CURSOR ─────────────────────────────── */
+    /* Cursor */
     .cursor {
       width: 10px; height: 10px;
       background: var(--terra);
@@ -49,7 +50,7 @@
       transition: transform 0.35s ease, opacity 0.3s;
     }
 
-    /* ─── NAVBAR ─────────────────────────────── */
+    /* Navbar */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 100;
@@ -88,7 +89,7 @@
     .nav-links a:hover { color: var(--terra); }
     .nav-links a:hover::after { width: 100%; }
 
-    /* ─── HERO ───────────────────────────────── */
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -189,7 +190,7 @@
       line-height: 1.4;
     }
 
-    /* ─── SECTION COMMON ─────────────────────── */
+    /* Section common */
     section { padding: 6rem 3rem; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
     .section-label {
@@ -215,7 +216,107 @@
       margin-bottom: 1.5rem;
     }
 
-    /* ─── SOCIAL STRIP ───────────────────────── */
+    /* Collapsible categories – FIXED STYLES */
+    .category-block {
+      margin-bottom: 1.8rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .category-header {
+      padding: 1.2rem 1.6rem;
+      background: var(--terra-pale);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      transition: background 0.25s;
+    }
+
+    .category-header:hover {
+      background: #fdf8f4;
+    }
+
+    .category-icon {
+      font-size: 1.9rem;
+      line-height: 1;
+    }
+
+    .category-title {
+      flex: 1;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--terra-dark);
+    }
+
+    .category-toggle {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--terra);
+      width: 32px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .category-toggle.active {
+      transform: rotate(135deg);
+    }
+
+    .category-links,
+    .sub-links {
+      display: none;
+      padding: 0.8rem 2.2rem 1.8rem 4.5rem;
+      background: white;
+    }
+
+    .category-links.active,
+    .sub-links.active {
+      display: block;
+    }
+
+    .category-links a,
+    .sub-links a {
+      display: block;
+      padding: 0.7rem 0;
+      color: var(--stone);
+      text-decoration: none;
+      font-size: 0.98rem;
+      transition: color 0.2s;
+    }
+
+    .category-links a:hover,
+    .sub-links a:hover {
+      color: var(--terra-dark);
+    }
+
+    .sub-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--ink);
+      border-bottom: 1px solid #f0e8e0;
+      margin-bottom: 0.6rem;
+    }
+
+    .sub-toggle {
+      font-size: 1.4rem;
+      color: var(--terra);
+      width: 28px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .sub-toggle.active {
+      transform: rotate(135deg);
+    }
+
+    /* Social strip */
     .social-strip {
       background: var(--terra-pale);
       padding: 4rem 3rem;
@@ -248,105 +349,7 @@
     }
     .social-pill svg { width: 18px; height: 18px; flex-shrink: 0; }
 
-    /* ─── COLLAPSIBLE CATEGORIES ─────────────────────────────── */
-    .category-block {
-      margin-bottom: 1.6rem;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      background: white;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-    }
-
-    .category-header {
-      padding: 1.2rem 1.6rem;
-      background: var(--terra-pale);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      transition: background 0.25s;
-    }
-
-    .category-header:hover {
-      background: #fdf8f4;
-    }
-
-    .category-icon {
-      font-size: 1.9rem;
-    }
-
-    .category-title {
-      flex: 1;
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--terra-dark);
-    }
-
-    .category-toggle {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: var(--terra);
-      width: 32px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .category-toggle.active {
-      transform: rotate(135deg);
-    }
-
-    .category-links,
-    .sub-links {
-      display: none;
-      padding: 0.6rem 2rem 1.6rem 4.2rem;
-      background: white;
-    }
-
-    .category-links.active,
-    .sub-links.active {
-      display: block;
-    }
-
-    .category-links a,
-    .sub-links a {
-      display: block;
-      padding: 0.65rem 0;
-      color: var(--stone);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .category-links a:hover,
-    .sub-links a:hover {
-      color: var(--terra-dark);
-    }
-
-    .sub-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem 0;
-      cursor: pointer;
-      font-weight: 500;
-      color: var(--ink);
-      border-bottom: 1px solid #f0e8e0;
-      margin-bottom: 0.5rem;
-    }
-
-    .sub-toggle {
-      font-size: 1.4rem;
-      color: var(--terra);
-      width: 28px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .sub-toggle.active {
-      transform: rotate(135deg);
-    }
-
-    /* ─── BLOGS ──────────────────────────────── */
+    /* Blogs */
     .blogs { background: var(--white); }
     .blog-grid {
       display: grid;
@@ -407,7 +410,7 @@
     }
     .blog-card:hover .blog-arrow { gap: 0.8rem; }
 
-    /* ─── YOUTUBE ────────────────────────────── */
+    /* YouTube */
     .youtube { background: var(--terra-pale); }
     .yt-grid {
       display: grid;
@@ -454,7 +457,7 @@
     }
     .yt-sub { font-size: 0.8rem; color: var(--stone); }
 
-    /* ─── DRIVE ──────────────────────────────── */
+    /* Drive */
     .drive { background: var(--white); }
     .drive-grid {
       display: grid;
@@ -501,7 +504,7 @@
     }
     .drive-card:hover .drive-desc { color: rgba(255,255,255,0.75); }
 
-    /* ─── COMMENT ────────────────────────────── */
+    /* Comments / Contact */
     .comments { background: var(--terra-pale); }
     .comment-form {
       max-width: 680px;
@@ -517,8 +520,7 @@
       font-weight: 500;
     }
     .form-group input,
-    .form-group textarea,
-    .form-group select {
+    .form-group textarea {
       border: 1.5px solid var(--border);
       background: white;
       padding: 0.85rem 1rem;
@@ -527,7 +529,6 @@
       color: var(--ink);
       outline: none;
       transition: border-color 0.3s;
-      resize: none;
     }
     .form-group input:focus,
     .form-group textarea:focus { border-color: var(--terra); }
@@ -560,7 +561,7 @@
     .comment-date { font-size: 0.75rem; color: var(--stone); margin-bottom: 0.6rem; }
     .comment-text { font-size: 0.88rem; color: var(--stone); line-height: 1.7; }
 
-    /* ─── FOOTER ─────────────────────────────── */
+    /* Footer */
     footer {
       background: var(--ink);
       color: rgba(255,255,255,0.5);
@@ -571,7 +572,7 @@
     }
     footer a { color: var(--terra-light); text-decoration: none; }
 
-    /* ─── ANIMATIONS ─────────────────────────── */
+    /* Animations */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -582,7 +583,7 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ─── RESPONSIVE ─────────────────────────── */
+    /* Responsive */
     @media (max-width: 768px) {
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { display: none; }
@@ -594,16 +595,17 @@
       .social-strip { padding: 3rem 1.5rem; }
       .form-row { grid-template-columns: 1fr; }
       .photo-badge { display: none; }
+      .category-links, .sub-links { padding-left: 3rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Custom Cursor -->
+  <!-- Cursor -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- ── NAV ── -->
+  <!-- Nav -->
   <nav>
     <a class="nav-logo" href="#">Bijendra Prajapati</a>
     <ul class="nav-links">
@@ -615,7 +617,7 @@
     </ul>
   </nav>
 
-  <!-- ── HERO ── -->
+  <!-- Hero -->
   <section id="about" style="padding:0;">
     <div class="hero">
       <div class="hero-text">
@@ -638,38 +640,33 @@
     </div>
   </section>
 
-  <!-- ── SOCIAL STRIP ── -->
+  <!-- Social Strip -->
   <div class="social-strip">
     <div class="section-inner" style="text-align:center; margin-bottom:1.8rem;">
       <p class="section-label">Find me on</p>
       <h2 class="section-title" style="margin-bottom:0;">My <em>Platforms</em></h2>
     </div>
     <div class="social-grid">
-
       <a class="social-pill" href="https://www.linkedin.com/in/bijendra-prajapati-608b7a91/" target="_blank">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
-
       <a class="social-pill" href="mailto:mebijen@gmail.com" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Gmail / Email
       </a>
-
       <a class="social-pill" href="https://www.youtube.com/@bijendraprajapati2899" target="_blank">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
         YouTube
       </a>
-
       <a class="social-pill" href="https://github.com/mebijen" target="_blank">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
         GitHub
       </a>
-
     </div>
   </div>
 
-  <!-- Research & Development – Collapsible Categories -->
+  <!-- Research & Development – Collapsible -->
   <section id="research" class="research">
     <div class="section-inner">
       <p class="section-label">Core Areas</p>
@@ -742,7 +739,7 @@
           </div>
         </div>
 
-        <!-- Mechanical Design -->
+        <!-- Cheatsheets -->
         <div class="category-block reveal">
           <div class="category-header" onclick="toggleCategory(this)">
             <div class="category-icon">🛠️</div>
@@ -782,7 +779,7 @@
     </div>
   </section>
 
-  <!-- ── BLOG ── -->
+  <!-- Blog (placeholder – add your real cards) -->
   <section id="blog" class="blogs">
     <div class="section-inner">
       <div class="reveal">
@@ -791,12 +788,19 @@
         <h2 class="section-title">Featured <em>Blog Posts</em></h2>
       </div>
       <div class="blog-grid">
-        <!-- your blog cards here – unchanged -->
+        <!-- Add your blog cards here -->
+        <a class="blog-card reveal" href="#">
+          <span class="blog-tag">Robotics · 5 min read</span>
+          <h3 class="blog-title">Understanding Legged Locomotion</h3>
+          <p class="blog-desc">An introduction to kinematics and control in quadruped robots...</p>
+          <span class="blog-arrow">Read More →</span>
+        </a>
+        <!-- more cards... -->
       </div>
     </div>
   </section>
 
-  <!-- ── YOUTUBE ── -->
+  <!-- YouTube (placeholder) -->
   <section id="youtube" class="youtube">
     <div class="section-inner">
       <div class="reveal">
@@ -805,12 +809,12 @@
         <h2 class="section-title">YouTube <em>Videos</em></h2>
       </div>
       <div class="yt-grid">
-        <!-- your youtube cards here – unchanged -->
+        <!-- Add your yt cards here -->
       </div>
     </div>
   </section>
 
-  <!-- ── GOOGLE DRIVE ── -->
+  <!-- Drive Collections (placeholder) -->
   <section id="drive" class="drive">
     <div class="section-inner">
       <div class="reveal">
@@ -819,12 +823,12 @@
         <h2 class="section-title">My Google <em>Drive</em> Collections</h2>
       </div>
       <div class="drive-grid">
-        <!-- your drive cards here – unchanged -->
+        <!-- Add your drive cards here -->
       </div>
     </div>
   </section>
 
-  <!-- ── COMMENTS / CONTACT ── -->
+  <!-- Contact / Comments -->
   <section id="contact" class="comments">
     <div class="section-inner">
       <div class="reveal">
@@ -832,11 +836,44 @@
         <div class="divider"></div>
         <h2 class="section-title">Leave a <em>Comment</em> or Message</h2>
       </div>
-      <!-- your comment form and display here – unchanged -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:4rem; align-items:start;">
+        <div>
+          <form class="comment-form" onsubmit="submitComment(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Full Name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" rows="5" placeholder="Write your thoughts, feedback, or message here…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Send Message
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+        <div>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; margin-bottom:1.5rem; color:var(--ink);">What people are saying</h3>
+          <div class="comment-display" id="commentDisplay">
+            <!-- comments load here -->
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
+  <!-- Footer -->
   <footer>
     <p style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; color:rgba(255,255,255,0.8); margin-bottom:0.8rem; font-style:italic;">Bijendra Prajapati</p>
     <p style="margin-bottom:1rem;">Educator · Researcher · Creator</p>
@@ -846,7 +883,7 @@
   </footer>
 
   <script>
-    // ── Custom Cursor ──
+    // Cursor
     const cursor = document.getElementById('cursor');
     const ring = document.getElementById('cursorRing');
     let mx = 0, my = 0, rx = 0, ry = 0;
@@ -873,7 +910,7 @@
       });
     });
 
-    // ── Scroll Reveal ──
+    // Scroll reveal
     const observer = new IntersectionObserver(entries => {
       entries.forEach((e, i) => {
         if (e.isIntersecting) {
@@ -885,7 +922,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // ── Comment Form ──
+    // Comment form
     function submitComment(e) {
       e.preventDefault();
       const name = document.getElementById('name').value;
@@ -900,23 +937,27 @@
       item.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // ── Category & Sub-branch toggles ──
+    // FIXED toggle functions – this is the key part
     function toggleCategory(header) {
       const block = header.closest('.category-block');
       const content = block.querySelector('.category-links');
       const toggle = header.querySelector('.category-toggle');
 
-      content.classList.toggle('active');
-      toggle.classList.toggle('active');
+      if (content && toggle) {
+        content.classList.toggle('active');
+        toggle.classList.toggle('active');
+      }
     }
 
     function toggleSubBranch(header) {
-      const branch = header.closest('.sub-branch');
-      const content = branch.querySelector('.sub-links');
+      const subBranch = header.closest('.sub-branch');
+      const content = subBranch.querySelector('.sub-links');
       const toggle = header.querySelector('.sub-toggle');
 
-      content.classList.toggle('active');
-      toggle.classList.toggle('active');
+      if (content && toggle) {
+        content.classList.toggle('active');
+        toggle.classList.toggle('active');
+      }
     }
   </script>
 
