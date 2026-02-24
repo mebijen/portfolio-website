@@ -840,8 +840,7 @@
       <h2 class="section-title">Research & <em>Development</em></h2>
 
       <div class="social-categories">
-
-       <!-- Legged Robotics -->
+<!-- Legged Robotics -->
 <div class="category-block reveal">
   <div class="category-header" onclick="toggleCategory(this)">
     <div class="category-icon">🤖</div>
@@ -849,62 +848,14 @@
     <span class="category-toggle">+</span>
   </div>
 
-  <div class="category-links">           <!-- will be hidden by CSS -->
-
-    <div class="sub-branch">
-      <div class="sub-header" onclick="toggleSubBranch(this)">
-        <span>Theoretical Base</span>
-        <span class="sub-toggle">+</span>   <!-- starts as + -->
-      </div>
-
-      <div class="sub-links">              <!-- hidden by CSS -->
-        <a href="https://docs.google.com/presentation/d/1o3xpRdVnjW206Efd1W3zy41k3A_KxsRgdkyOXAKdDRs/edit?slide=id.g289cb57f083_0_283#slide=id.g289cb57f083_0_283">Kinematics</a>
-        <a href="https://docs.google.com/presentation/d/1yiRQ9m7rA-Ci4zR0SOiX-bAIji_ZBRpx7SxWVQP5qd0/edit?slide=id.g303e7549c3a_0_176#slide=id.g303e7549c3a_0_176">Actuators & PID</a>
-        <a href="https://drive.google.com/file/d/1HJCAjXctaeLrT68XX_biyxQn5c6Pes3d/view">Inverse kinematics</a>
-      </div>
-    </div>
-
-            <script>
-function toggleSubBranch(element) {
-  // Find the closest .sub-branch container
-  const subBranch = element.closest('.sub-branch');
-  const subLinks = subBranch.querySelector('.sub-links');
-  const toggle = element.querySelector('.sub-toggle');
-
-  // Toggle active class
-  subLinks.classList.toggle('active');
-
-  // Change + ↔ –
-  if (subLinks.classList.contains('active')) {
-    toggle.textContent = '–';
-    // toggle.classList.add('active');   // if using rotation instead
-  } else {
-    toggle.textContent = '+';
-    // toggle.classList.remove('active');
-  }
-}
-
-// Optional: same logic for main category toggle
-function toggleCategory(element) {
-  const categoryBlock = element.closest('.category-block');
-  const categoryLinks = categoryBlock.querySelector('.category-links');
-  const toggle = element.querySelector('.category-toggle');
-
-  categoryLinks.classList.toggle('active');
-
-  if (categoryLinks.classList.contains('active')) {
-    toggle.textContent = '–';
-  } else {
-    toggle.textContent = '+';
-  }
-}
-</script>
-
+  <!-- This whole block is hidden until main + is clicked -->`
+  <div class="category-links">
             <div class="sub-branch">
               <div class="sub-header" onclick="toggleSubBranch(this)">
                 <span>Videos</span>
                 <span class="sub-toggle">+</span>
               </div>
+
               <div class="sub-links">
                 <a href="https://cs123-stanford.readthedocs.io/en/latest/schedule/labs/fall-25/lab-3.html">Simple Quadruped</a>
                 <a href="https://cs123-stanford.readthedocs.io/en/latest/schedule/labs/fall-25/lab-4.html">Model based control</a>
@@ -1211,7 +1162,7 @@ function toggleCategory(element) {
       <!-- 6. PLOS -->
       <a href="https://plos.org/our-journals/" target="_blank" rel="noopener noreferrer" class="journal-card">
         <div class="journal-logo-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PLOS_logo.svg/90px-PLOS_logo.svg.png" 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PLOS_logo.svg/px-PLOS_logo.svg.png" 
                alt="PLOS Journal Selector" class="journal-logo plos">
         </div>
         <span class="journal-name">PLOS Journal Selector</span>
@@ -1494,5 +1445,38 @@ function toggleCategory(element) {
       item.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   </script> -->
+  <script>
+  function toggleSubBranch(headerElement) {
+    const subBranch = headerElement.closest('.sub-branch');
+    const content = subBranch.querySelector('.sub-links');
+    const toggle = headerElement.querySelector('.sub-toggle');
+
+    // Toggle visibility
+    content.classList.toggle('active');
+
+    // Change + → – (or rotate if you use the CSS rotate version)
+    if (content.classList.contains('active')) {
+      toggle.textContent = '–';
+      // toggle.classList.add('active');   // uncomment if using rotate instead of text change
+    } else {
+      toggle.textContent = '+';
+      // toggle.classList.remove('active');
+    }
+  }
+
+  function toggleCategory(headerElement) {
+    const block = headerElement.closest('.category-block');
+    const content = block.querySelector('.category-links');
+    const toggle = headerElement.querySelector('.category-toggle');
+
+    content.classList.toggle('active');
+
+    if (content.classList.contains('active')) {
+      toggle.textContent = '–';
+    } else {
+      toggle.textContent = '+';
+    }
+  }
+</script>
 </body>
 </html>

@@ -1173,41 +1173,47 @@ footer a {
   width: 80%;
 }
 
-/* Hide sub-links by default */
+/* Hide expandable content by default */
 .category-links,
 .sub-links {
-  display: none;          /* completely hidden initially */
-}
-
-/* When active/expanded, show them */
-.category-links.active,
-.sub-links.active {
-  display: block;         /* or flex/grid depending on your layout */
-}
-
-/* Optional: smooth open/close animation */
-.sub-links {
+  display: none;
   overflow: hidden;
-  transition: max-height 0.35s ease-out, opacity 0.3s ease;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease;
   max-height: 0;
   opacity: 0;
 }
 
+/* When expanded */
+.category-links.active,
 .sub-links.active {
-  max-height: 500px;      /* large enough for your content – adjust if needed */
+  display: block;
+  max-height: 1200px;   /* ← make this larger than your tallest content will ever be */
   opacity: 1;
 }
 
-/* Rotate or style the toggle symbol nicely (optional) */
-.sub-toggle,
-.category-toggle {
-  transition: transform 0.3s ease;
+/* Make toggle look nicer */
+.category-toggle,
+.sub-toggle {
   display: inline-block;
-  width: 1em;
+  width: 20px;
   text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
-.sub-toggle.active,
-.category-toggle.active {
-  transform: rotate(180deg);   /* optional: arrow spins instead of + → – */
+/* Optional: rotate the + instead of changing to – (looks modern) */
+.category-toggle.active,
+.sub-toggle.active {
+  transform: rotate(135deg);   /* or 180deg if you prefer */
+  color: #007bff;             /* optional highlight color */
 }
+
+/* Optional: hover effect on headers */
+.category-header:hover,
+.sub-header:hover {
+  background: #f0f8ff;
+}
+
