@@ -1172,3 +1172,42 @@ footer a {
 .journal-logo.jane {         /* JANE might be small */
   width: 80%;
 }
+
+/* Hide sub-links by default */
+.category-links,
+.sub-links {
+  display: none;          /* completely hidden initially */
+}
+
+/* When active/expanded, show them */
+.category-links.active,
+.sub-links.active {
+  display: block;         /* or flex/grid depending on your layout */
+}
+
+/* Optional: smooth open/close animation */
+.sub-links {
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.sub-links.active {
+  max-height: 500px;      /* large enough for your content – adjust if needed */
+  opacity: 1;
+}
+
+/* Rotate or style the toggle symbol nicely (optional) */
+.sub-toggle,
+.category-toggle {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+}
+
+.sub-toggle.active,
+.category-toggle.active {
+  transform: rotate(180deg);   /* optional: arrow spins instead of + → – */
+}

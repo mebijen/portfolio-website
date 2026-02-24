@@ -841,25 +841,64 @@
 
       <div class="social-categories">
 
-        <!-- Legged Robotics -->
-        <div class="category-block reveal">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <div class="category-icon">🤖</div>
-            <h3 class="category-title">Legged Robotics</h3>
-            <span class="category-toggle">+</span>
-          </div>
-          <div class="category-links">
-            <div class="sub-branch">
-              <div class="sub-header" onclick="toggleSubBranch(this)">
-                <span>Theoretical Base</span>
-                <span class="sub-toggle">+</span>
-              </div>
-              <div class="sub-links">
-                <a href="https://docs.google.com/presentation/d/1o3xpRdVnjW206Efd1W3zy41k3A_KxsRgdkyOXAKdDRs/edit?slide=id.g289cb57f083_0_283#slide=id.g289cb57f083_0_283">Kinematics</a>
-                <a href="https://docs.google.com/presentation/d/1yiRQ9m7rA-Ci4zR0SOiX-bAIji_ZBRpx7SxWVQP5qd0/edit?slide=id.g303e7549c3a_0_176#slide=id.g303e7549c3a_0_176">Actuators & PID</a>
-                <a href="https://drive.google.com/file/d/1HJCAjXctaeLrT68XX_biyxQn5c6Pes3d/view">Inverse kinematics</a>
-              </div>
-            </div>
+       <!-- Legged Robotics -->
+<div class="category-block reveal">
+  <div class="category-header" onclick="toggleCategory(this)">
+    <div class="category-icon">🤖</div>
+    <h3 class="category-title">Legged Robotics</h3>
+    <span class="category-toggle">+</span>
+  </div>
+
+  <div class="category-links">           <!-- will be hidden by CSS -->
+
+    <div class="sub-branch">
+      <div class="sub-header" onclick="toggleSubBranch(this)">
+        <span>Theoretical Base</span>
+        <span class="sub-toggle">+</span>   <!-- starts as + -->
+      </div>
+
+      <div class="sub-links">              <!-- hidden by CSS -->
+        <a href="https://docs.google.com/presentation/d/1o3xpRdVnjW206Efd1W3zy41k3A_KxsRgdkyOXAKdDRs/edit?slide=id.g289cb57f083_0_283#slide=id.g289cb57f083_0_283">Kinematics</a>
+        <a href="https://docs.google.com/presentation/d/1yiRQ9m7rA-Ci4zR0SOiX-bAIji_ZBRpx7SxWVQP5qd0/edit?slide=id.g303e7549c3a_0_176#slide=id.g303e7549c3a_0_176">Actuators & PID</a>
+        <a href="https://drive.google.com/file/d/1HJCAjXctaeLrT68XX_biyxQn5c6Pes3d/view">Inverse kinematics</a>
+      </div>
+    </div>
+
+            <script>
+function toggleSubBranch(element) {
+  // Find the closest .sub-branch container
+  const subBranch = element.closest('.sub-branch');
+  const subLinks = subBranch.querySelector('.sub-links');
+  const toggle = element.querySelector('.sub-toggle');
+
+  // Toggle active class
+  subLinks.classList.toggle('active');
+
+  // Change + ↔ –
+  if (subLinks.classList.contains('active')) {
+    toggle.textContent = '–';
+    // toggle.classList.add('active');   // if using rotation instead
+  } else {
+    toggle.textContent = '+';
+    // toggle.classList.remove('active');
+  }
+}
+
+// Optional: same logic for main category toggle
+function toggleCategory(element) {
+  const categoryBlock = element.closest('.category-block');
+  const categoryLinks = categoryBlock.querySelector('.category-links');
+  const toggle = element.querySelector('.category-toggle');
+
+  categoryLinks.classList.toggle('active');
+
+  if (categoryLinks.classList.contains('active')) {
+    toggle.textContent = '–';
+  } else {
+    toggle.textContent = '+';
+  }
+}
+</script>
 
             <div class="sub-branch">
               <div class="sub-header" onclick="toggleSubBranch(this)">
@@ -1163,7 +1202,7 @@
       <!-- 5. IEEE – clean SVG, size matched via CSS -->
       <a href="https://publication-recommender.ieee.org/" target="_blank" rel="noopener noreferrer" class="journal-card">
         <div class="journal-logo-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/90px-IEEE_logo.svg.png" >
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/90px-IEEE_logo.svg.png" 
                alt="IEEE Publication Recommender" class="journal-logo ieee">
         </div>
         <span class="journal-name">IEEE Publication Recommender</span>
@@ -1172,7 +1211,7 @@
       <!-- 6. PLOS -->
       <a href="https://plos.org/our-journals/" target="_blank" rel="noopener noreferrer" class="journal-card">
         <div class="journal-logo-wrap">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PLOS_logo.svg/512px-PLOS_logo.svg.png" 
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/PLOS_logo.svg/90px-PLOS_logo.svg.png" 
                alt="PLOS Journal Selector" class="journal-logo plos">
         </div>
         <span class="journal-name">PLOS Journal Selector</span>
@@ -1191,7 +1230,7 @@
       <a href="https://jane.biosemantics.org/" target="_blank" rel="noopener noreferrer" class="journal-card">
         <div class="journal-logo-wrap">
           <!-- Fallback: simple academic/search icon; no branded logo exists publicly -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Search_font_awesome.svg/90px-Search_font_awesome.svg.png">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Search_font_awesome.svg/512px-Search_font_awesome.svg.png" 
                alt="JANE Estimator" class="journal-logo jane" style="padding: 15%; filter: opacity(0.8);">
           <!-- Alternative: if you want text-only, remove img and add <span style="font-weight:bold; color:#555;">JANE</span> -->
         </div>
