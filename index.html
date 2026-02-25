@@ -668,140 +668,152 @@
 
    <div class="social-categories">
 
-  <!-- 1️⃣ Legged Robotics -->
-  <div class="category-block">
-    <h3 class="category-title">Quadruped Robotics</h3>
-    <div class="category-links">
-      <a href="https://pab47.github.io/legs.html" target="_blank">Legged Robotics</a>
-      <a href="https://see.stanford.edu/Course/CS223A">Robotics introduction</a>
-      <a href="https://github.com/awesomelistsio/awesome-robotics">Awesome Robotics</a>
-      <a href="https://www.youtube.com/watch?v=jVu-Hijns70&list=PLggLP4f-rq02vX0OQQ5vrCxbJrzamYDfx">Modern Robotics</a>
-      <a href="https://getintorobotics.com/">Robotics intro</a>
-      <a href="https://jslee02.github.io/awesome-robotics-libraries/">Robotics libraries</a>
-      <a href="https://addy1997.github.io/Robotics-Resources/">Robotic resources</a>
-      <a href="https://akshetpatel.substack.com/p/15-github-repositories-to-learn-robotics">learn robotics</a>
-      <a href="https://www.youtube.com/playlist?list=PLpppns-JGSyKFwngvh-DYRBpH9NUdqH4J">Control of legged robots</a>
-      <a href="https://cs123-stanford.readthedocs.io/en/latest/">Hands on intro</a>
-      <a href="https://www.youtube.com/c/CyrillStachniss">Mobile robotics</a>
-      <a href="https://www.youtube.com/playlist?list=PL4g1oAdmuCfqmYvURLzVFkMMUI7839biN"> beginners robotics</a>
+   <!-- ── PART 1: Modern collapsible cards (keep as is) ── -->
+   <div class="category-block reveal">
+    <div class="category-header" onclick="toggleCategory(this)">
+      <div class="category-icon">🤖</div>
+      <h3 class="category-title">Legged Robotics</h3>
+      <span class="category-toggle">+</span>
     </div>
+    <div class="category-links">
+      <!-- your current links here – keep them collapsible -->
+      <div class="sub-branch">
+        <div class="sub-header" onclick="toggleSubBranch(this)">
+          <span>Theoretical Base</span>
+          <span class="sub-toggle">+</span>
+        </div>
+        <div class="sub-links">
+          <a href="https://docs.google.com/...">Kinematics</a>
+          <a href="https://docs.google.com/...">Actuators & PID</a>
+          <a href="https://drive.google.com/...">Inverse kinematics</a>
+        </div>
+      </div>
+      <!-- more sub-branches if you have them -->
+    </div>
+   </div>
+
+  <!-- Add more collapsible cards here if you want (Channels, Programming, etc.) -->
+
+  <!-- ── PART 2: Non-collapsible plain list style (like your third screenshot) ── -->
+  <div class="plain-category-list" style="margin-top: 4rem; padding: 0 1rem;">
+    <h3 style="font-size:1.4rem; color:var(--terra-dark); margin:2rem 0 1rem; text-align:center;">
+      More Resources – Quick Access
+    </h3>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.2rem 0 0.6rem; color:var(--ink);">Quadruped Robotics</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://pab47.github.io/legs.html" target="_blank">Legged Robotics</a>
+        <a href="https://see.stanford.edu/Course/CS223A">Robotics introduction</a>
+        <a href="https://github.com/awesomelistsio/awesome-robotics">Awesome Robotics</a>
+        <a href="https://www.youtube.com/watch?v=jVu-Hijns70&list=PLggLP4f-rq02vX0OQQ5vrCxbJrzamYDfx">Modern Robotics</a>
+        <a href="https://getintorobotics.com/">Robotics intro</a>
+        <a href="https://jslee02.github.io/awesome-robotics-libraries/">Robotics libraries</a>
+        <a href="https://addy1997.github.io/Robotics-Resources/">Robotic resources</a>
+        <a href="https://akshetpatel.substack.com/p/15-github-repositories-to-learn-robotics">learn robotics</a>
+        <a href="https://www.youtube.com/playlist?list=PLpppns-JGSyKFwngvh-DYRBpH9NUdqH4J">Control of legged robots</a>
+        <a href="https://cs123-stanford.readthedocs.io/en/latest/">Hands on intro</a>
+        <a href="https://www.youtube.com/c/CyrillStachniss">Mobile robotics</a>
+        <a href="https://www.youtube.com/playlist?list=PL4g1oAdmuCfqmYvURLzVFkMMUI7839biN">beginners robotics</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Control Systems</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://www.youtube.com/@Eigensteve">Control bootcamp</a>
+        <a href="https://home.usn.no/~roshans/mpc/" target="_blank">Model Predictive Control</a>
+        <a href="https://www.bilibili.com/video/BV1VmmqYpEEb/" target="_blank">Model Predictive Control</a>
+        <a href="https://www.youtube.com/watch?v=3J9_lDEo5vk&list=PLyqSpQzTE6M91gU9WE5AOMhAkCf6HGbey">MPC: Theory & Applications NPTEL</a>
+        <a href="https://see.stanford.edu/Course/EE263">Linear Dynamical systems</a>
+        <a href="https://see.stanford.edu/Course/EE364A">Convex optimization</a>
+        <a href="https://controleducation.sites.sheffield.ac.uk/introtompcbook/prediction">Prediction</a>
+        <a href="https://www.mathworks.com/videos/series/understanding-model-predictive-control.html">Mathworks MPC</a>
+        <a href="https://www.youtube.com/user/ControlLectures/videos">Control system by Bryan Douglas</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Robotics Programming</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://md8-habibullah.github.io/top-github-repos-list/">Programming list</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Mechanical Design</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://grabcad.com/library">SolidWorks Models</a>
+        <a href="https://www.youtube.com/c/JeremyFieldingSr">Mech design</a>
+        <a href="https://www.mcmaster.com/">Mcmaster</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Research & Publications</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://sci-hub.tw">Sci-hub</a>
+        <a href="https://www.researchgate.net/">Researchgate</a>
+        <a href="https://scholar.google.com/">Google scholar</a>
+        <a href="https://www.jstor.org/">JSTOR</a>
+        <a href="https://www.loc.gov/">Library of congress</a>
+        <a href="https://www.science.gov/">Science gov</a>
+        <a href="https://www.worldcat.org/">world cat</a>
+        <a href="https://z-library.sk">Z-library</a>
+        <a href="https://libgen.la">Libgen</a>
+        <a href="https://www.refseek.com/">Refseek</a>
+        <a href="https://www.base-search.net/">BASE</a>
+        <a href="https://core.ac.uk/">CORE</a>
+        <a href="https://www.semanticscholar.org/">semantic scholar</a>
+        <a href="https://xueshu.baidu.com/">Baidu scholar</a>
+        <a href="https://www.academia.edu/">Academia</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Github repo</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://github.com/kiloreux/awesome-robotics">Open source resources</a>
+        <a href="https://github.com/idra-lab/locosim">Test on robotics</a>
+        <a href="https://github.com/topics/robotics">Robotics</a>
+        <a href="https://github.com/amarrmb/robotics-glossary/tree/main">Robotics glossary</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Webpages of interest</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://akshetpatel.substack.com/p/10-open-source-robotics-projects">Open source projects</a>
+        <a href="https://github.com/idra-lab/locosim">Test on robotics</a>
+        <a href="https://www.youtube.com/channel/UCmkP178NasnhR3TWQyyP4Gw">How to Mechatronics</a>
+        <a href="https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm">SLAM</a>
+        <a href="https://www.youtube.com/user/SkyentificTube">roboenthusiast</a>
+        <a href="https://www.youtube.com/c/LearnRobotics">learn robotics</a>
+        <a href="https://www.youtube.com/user/awesjosh/videos">roboenthusiast</a>
+        <a href="https://www.youtube.com/channel/UCKm7LGjjSKpSpvNk_ULT8bw">motors</a>
+        <a href="https://www.youtube.com/user/jamesbruton">roboenthusiast1</a>
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Youtube Channels</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://www.youtube.com/@smartereveryday">Smarter Every Day</a>
+        <a href="https://www.youtube.com/c/GearDownForWhat">Gear Down For What</a>
+        <a href="https://www.youtube.com/c/CyrillStachniss">Cyrill Stachniss</a>
+        <!-- add more if you want -->
+      </p>
+    </div>
+
+    <div class="category-item">
+      <h4 style="font-size:1.18rem; margin:1.8rem 0 0.6rem; color:var(--ink);">Bilibili videos</h4>
+      <p style="color:#0066cc; line-height:1.6;">
+        <a href="https://www.bilibili.com/video/BV1VmmqYpEEb/" target="_blank">Model Predictive Control series</a>
+        <!-- add more Bilibili links here -->
+      </p>
+    </div>
+
   </div>
-
-  <!-- 2️⃣ Control Systems -->
-  <div class="category-block">
-    <h3 class="category-title">Control Systems</h3>
-    <div class="category-links">
-      <a href="https://www.youtube.com/@Eigensteve">Control bootcamp</a>
-      <a href="https://home.usn.no/~roshans/mpc/" target="_blank">Model Predictive Control</a>
-      <a href="https://www.bilibili.com/video/BV1VmmqYpEEb/?spm_id_from=333.337.search-card.all.click&vd_source=59c028a344a9a489c33d35fb9bb3aab1">Model Predictive Control</a>
-      <a href="https://www.youtube.com/watch?v=3J9_lDEo5vk&list=PLyqSpQzTE6M91gU9WE5AOMhAkCf6HGbey">MPC: Theory & Applications NPTEL</a>
-      <a href="https://see.stanford.edu/Course/EE263">Linear Dynamical systems</a>
-      <a href="https://see.stanford.edu/Course/EE364A">Convex optimization</a>
-      <a href="https://www.youtube.com/watch?v=3J9_lDEo5vk&list=PLyqSpQzTE6M91gU9WE5AOMhAkCf6HGbey">MPC video</a>
-      <a href="https://controleducation.sites.sheffield.ac.uk/introtompcbook/prediction">Prediction</a>
-      <a href="https://www.mathworks.com/videos/series/understanding-model-predictive-control.html">Mathworks MPC</a>
-      <a href="https://controleducation.sites.sheffield.ac.uk/introtompcbook/prediction">MPC</a>
-      <a href="+https://www.youtube.com/user/ControlLectures/videos">Control system by Bryan Douglas</a>
-    </div>
-  </div>
-
-  <!-- 3️⃣ Robotics Programming -->
-  <div class="category-block">
-    <h3 class="category-title">Robotics Programming</h3>
-    <div class="category-links">
-      <a href="https://md8-habibullah.github.io/top-github-repos-list/">Programming list</a>
-      <!-- <a href="#">Python for Robotics</a>
-      <a href="#">Python for Robotics</a>
-      <a href="#">C++ Control Systems</a>
-      <a href="#">GitHub Repositories</a> -->
-    </div>
-  </div>
-
-  <!-- 4️⃣ Mechanical Design -->
-  <div class="category-block">
-    <h3 class="category-title">Mechanical Design</h3>
-    <div class="category-links">
-      <a href="https://grabcad.com/library">SolidWorks Models</a>
-      <a href="https://www.youtube.com/c/JeremyFieldingSr">Mech design</a>
-      <!-- <a href="#">Design Calculations</a> -->
-      <a href="https://www.mcmaster.com/">Mcmaster</a>
-    </div>
-  </div>
-
-  <!-- 5️⃣ Research & Publications -->
-  <div class="category-block">
-    <h3 class="category-title">Research & Publications</h3>
-    <div class="category-links">
-      <a href="https://sci-hub.tw">Sci-hub</a>
-      <a href="https://www.researchgate.net/">Researchgate</a>
-      <a href="https://scholar.google.com/">Google scholar</a>
-      <a href="https://www.jstor.org/">JSTOR</a>
-      <a href="https://www.loc.gov/">Library of congress</a>
-      <a href="https://www.science.gov/">Science gov</a>
-      <a href="https://www.worldcat.org/">world cat</a>
-      <a href="https://z-library.sk">Z-library</a>
-      <a href="https://libgen.la">Libgen</a>
-      <a href="https://www.refseek.com/">Refseek</a>
-      <a href="https://www.base-search.net/">BASE</a>
-      <a href="https://core.ac.uk/">CORE</a>
-      <a href="https://www.semanticscholar.org/">semantic scholar</a>
-      <a href="https://xueshu.baidu.com/">Baidu scholar</a>
-      <a href="https://www.academia.edu/">Academia</a>
-      <a href="https://core.ac.uk/">CORE</a>
-    </div>
-  </div>
-
-    <!-- 6 Github repo -->
-  <div class="category-block">
-    <h3 class="category-title">Github repo</h3>
-    <div class="category-links">
-      <a href="https://github.com/kiloreux/awesome-robotics">Open source resources</a>
-      <a href="https://github.com/idra-lab/locosim">Test on robotics</a>
-      <a href="https://github.com/topics/robotics">Robotics</a>
-      <a href="https://github.com/amarrmb/robotics-glossary/tree/main">Robotics glossary</a>
-    </div>
-  </div>
-
-     <!-- 7 Websites -->
-  <div class="category-block">
-    <h3 class="category-title">Webpages of interest</h3>
-    <div class="category-links">
-      <a href="https://akshetpatel.substack.com/p/10-open-source-robotics-projects">Open source projects</a>
-      <a href="https://github.com/idra-lab/locosim">Test on robotics</a>
-      <a href="https://www.youtube.com/channel/UCmkP178NasnhR3TWQyyP4Gw">How to Mechatronics</a>
-      <a href="https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm">SLAM</a>
-      <a href="https://www.youtube.com/user/SkyentificTube">roboenthusiast</a>
-      <a href="https://www.youtube.com/c/LearnRobotics"> learn robotics</a>
-      <a href="https://www.youtube.com/user/awesjosh/videos">roboenthusiast</a>
-      <a href="https://www.youtube.com/channel/UCKm7LGjjSKpSpvNk_ULT8bw">motors</a>
-      <a href="https://www.youtube.com/user/jamesbruton">roboenthusiast1</a>
-      <a href="https://www.youtube.com/@%E7%A8%9A%E6%99%96%E5%90%9B/videos">robo</a>
-      <a href="https://www.youtube.com/channel/UC_tBakbmdudCiTy3rP6Zp5A/videos">robo1</a>
-      <a href="https://www.youtube.com/channel/UClIHBZNAdeVpHsAlYC1lJfg">robo2</a>
-      <a href="https://www.youtube.com/channel/UCfYfK0tzHZTpNFrc_NDKfTA">Arduino pi</a>
-       <a href="https://www.youtube.com/@kevinwoodrobotics">Arduino pi</a>
-    </div>
-  </div>
-
-   <!-- 8 Youtube Videos -->
-  <div class="category-block">
-    <h3 class="category-title">Youtube Channels</h3>
-    <div class="category-links">
-      <a href="https://akshetpatel.substack.com/p/10-open-source-robotics-projects">Open source projects</a>
-      <a href="https://github.com/idra-lab/locosim">Test on robotics</a>
-      <a href="https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm">SLAM</a>
-
-    </div>
-
-     <!-- 9 Bilibili videos -->
-  <div class="category-block">
-    <h3 class="category-title">Bilibili videos</h3>
-    <div class="category-links">
-      <a href="https://akshetpatel.substack.com/p/10-open-source-robotics-projects">Open source projects</a>
-      <a href="https://github.com/idra-lab/locosim">Test on robotics</a>
-      <a href="https://www.youtube.com/watch?v=B2qzYCeT9oQ&list=PLpUPoM7Rgzi_7YWn14Va2FODh7LzADBSm">SLAM</a>
-      <a href="#">Datasets</a>
-    </div>
 </div>
 
 <!-- ChatGPT -->
